@@ -1,0 +1,7 @@
+<h2 *ngIf="isnTerms; else ub">Aantal</h2>
+
+<ng-template #ub>
+    <h2>Bovengrens</h2>
+</ng-template>
+
+<app-list [list]="list"></app-list>
