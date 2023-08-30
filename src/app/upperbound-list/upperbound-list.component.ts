@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { InputNumberService } from '../input-number.service';
 
 @Component({
   selector: 'app-upperbound-list',
@@ -6,8 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./upperbound-list.component.scss']
 })
 export class UpperboundListComponent {
-  @Input() inputNumber: string = "0"
-
+  inputNumber: string = "0"
+  constructor(private inputNumberService: InputNumberService) { }
   createFibonacciArray(upperBound: string): number[] {
     let fibonacciArray: number[] = [0]
     let numberToAdd: number = 1
@@ -27,7 +28,16 @@ export class UpperboundListComponent {
 
   list!: string
 
+
   ngOnChanges(): void {
+    console.log("ding")
+    this.inputNumber = this.inputNumberService.getNumber()
+    this.list = this.createList(this.createFibonacciArray(this.inputNumber))
+  }
+
+  refresh() {
+    console.log("ding")
+    this.inputNumber = this.inputNumberService.getNumber()
     this.list = this.createList(this.createFibonacciArray(this.inputNumber))
   }
 }

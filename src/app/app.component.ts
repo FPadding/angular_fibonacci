@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { InputNumberService } from './input-number.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +12,10 @@ export class AppComponent {
   title = 'angular-fibonacci';
   inputNumber: string = ""
 
-  onChange() {
-    this.inputNumberService.writeNumber(this.inputNumber)
+
+
+  ngOnChanges() {
+
+    // this.inputNumberService.writeNumber(this.inputNumber)
   }
 }

@@ -4,9 +4,8 @@ import { Injectable, Input } from '@angular/core';
   providedIn: 'root'
 })
 export class InputNumberService {
+  inputNumber: string = ""
 
-
-  @Input() inputNumber: string = ""
 
   getNumber(): string {
     return this.inputNumber

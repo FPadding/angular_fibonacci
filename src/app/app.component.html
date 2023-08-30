@@ -1,9 +1,9 @@
 <h1>Fibonacci</h1>
 <nav>
-  <button>Aantal</button>
-  <button>bovengrens</button>
-  <input type="number" [(ngModel)]="inputNumber" />
+  <button routerLink="nterms">Aantal</button>
+  <button routerLink="upperbound">bovengrens</button>
+  <input type="number" name="input" [(ngModel)]="inputNumber" />
 </nav>
-<!-- <router-outlet [inputNumber]="inputNumber"></router-outlet> -->
-<app-upperbound-list [inputNumber]="inputNumber"></app-upperbound-list>
+<router-outlet></router-outlet>
+<!-- <app-upperbound-list [inputNumber]="inputNumber"></app-upperbound-list> -->
 <!-- <app-nterms-list [inputNumber]="inputNumber></app-nterms-list> -->
