@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'app-upperbound-list',
+  selector: 'app-lists',
   templateUrl: './lists.component.html',
   styleUrls: ['./lists.component.scss']
 })
