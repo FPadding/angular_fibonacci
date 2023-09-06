@@ -1,0 +1,13 @@
+<h1>Priemgetallen</h1>
+
+<input #pInput type="number" placeholder="bovengrens" />
+<button name="pbutton" (click)="onClick(pInput.value)">Genereer lijst!</button>
+
+<main *ngIf="activated">
+    <h2>Dit zijn de priemgetallen tot {{inputNumber}}. Het
+        <span *ngIf="plural; else singular">zijn</span>
+        <ng-template #singular>is</ng-template>
+        er {{arrayLength}}.
+    </h2>
+    <app-list [list]="list"></app-list>
+</main>

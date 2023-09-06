@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListsComponent } from './lists/lists.component';
+import { FibonacciListComponent } from './fibonacci-list/fibonacci-list.component';
 import { ListComponent } from './list/list.component';
+import { PrimeListComponent } from './prime-list/prime-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListsComponent,
-    ListComponent
+    FibonacciListComponent,
+    ListComponent,
+    PrimeListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

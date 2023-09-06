@@ -1,0 +1,9 @@
+<h1>Fibonacci</h1>
+
+<input #fInput type="number" placeholder="bovengrens" />
+<button name="fbutton" (click)="onClick(fInput.value)">Genereer lijst!</button>
+
+<main *ngIf="activated">
+    <h2>De rij van Fibonacci tot {{inputNumber}}. Het bevat {{arrayLength}} getal<span *ngIf="plural">len</span></h2>
+    <app-list [list]="list"></app-list>
+</main>
